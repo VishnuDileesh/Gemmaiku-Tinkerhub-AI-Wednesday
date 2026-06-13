@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# macOS
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+
+# MLX Fine-tuning & Large Model Weights
+mlx_outputs/
+*.safetensors
+*.bin
+*.pth
+*.pt
