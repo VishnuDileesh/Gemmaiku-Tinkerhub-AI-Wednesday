@@ -1,6 +1,6 @@
 # AI-Wednesday-Gemmaiku
 
-Fine-tuning Gemma models on Apple Silicon using MLX.
+Fine-tuning [Gemma](https://ai.google.dev/gemma) models on Apple Silicon using Apple's [MLX](https://github.com/ml-explore/mlx) framework.
 
 ## Project Structure
 
@@ -24,7 +24,7 @@ This project follows a professional AI/ML engineering repository structure:
 
 ## Setup & Installation
 
-This project uses `uv` for Python package and virtual environment management.
+This project uses [uv](https://github.com/astral-sh/uv) for Python package and virtual environment management.
 
 ### 1. Synchronize Dependencies
 First, install `uv` if you haven't already, and sync the project environment:
@@ -41,7 +41,7 @@ uv sync
 Gemma-3 models are gated on Hugging Face, requiring license terms acceptance before they can be downloaded:
 
 1. **Accept License Terms on Hugging Face**:
-   * Visit the [Gemma-3-270m Model Card](https://huggingface.co/google/gemma-3-270m) or the [Gemma-3-1b-it Model Card](https://huggingface.co/google/gemma-3-1b-it).
+   * Visit the [Gemma-3-270m Model Card](https://huggingface.co/google/gemma-3-270m) or the [Gemma-3-1b-pt Model Card](https://huggingface.co/google/gemma-3-1b-pt) (see the full [Gemma 3 Release Collection](https://huggingface.co/collections/google/gemma-3-release)).
    * Log in to your Hugging Face account and accept the license terms.
 
 2. **Generate a User Access Token**:
@@ -78,12 +78,17 @@ You can import helper code (like the syllable counter) anywhere in the project o
 from gemmaiku import get_syllable_count_for_line
 ```
 
+### Syllable Counter UI
+We also utilize a visual **Syllable Counter** tool to calculate the total number of syllables in a word or sentence line-by-line, showing phonetic hyphenation and syllable verification. For an online reference, you can also use [SyllableCounter.net](https://syllablecounter.net/):
+
+![Syllable Counter UI](assets/syllable_counter_ui.png)
+
 ## Exporting & Deploying to Ollama & OpenWebUI
 
-Once fine-tuning is completed and the adapters are fused with the base model, you can export and run the model locally using Ollama and OpenWebUI.
+Once fine-tuning is completed and the adapters are fused with the base model, you can export and run the model locally using [Ollama](https://ollama.com) and [OpenWebUI](https://openwebui.com).
 
 ### 1. Convert the Fine-Tuned Model to GGUF
-To run the model on Ollama, it must be in GGUF format. You can convert the fused model using `llama.cpp`:
+To run the model on Ollama, it must be in GGUF format. You can convert the fused model using [llama.cpp](https://github.com/ggml-org/llama.cpp):
 
 1. Clone the `llama.cpp` repository and install its dependencies:
    ```bash
@@ -125,7 +130,7 @@ To run the model on Ollama, it must be in GGUF format. You can convert the fused
    ```
 
 ### 3. Setup OpenWebUI
-To run OpenWebUI via Docker and connect it to your local Ollama instance:
+To run OpenWebUI via [Docker](https://www.docker.com) and connect it to your local Ollama instance:
 
 1. Run the following Docker command:
    ```bash
