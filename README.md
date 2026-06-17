@@ -1,6 +1,10 @@
 # AI-Wednesday-Gemmaiku
 
-Fine-tuning [Gemma](https://ai.google.dev/gemma) models on Apple Silicon using Apple's [MLX](https://github.com/ml-explore/mlx) framework.
+Fine-tuning [Gemma](https://ai.google.dev/gemma) models on Apple Silicon using Apple's [MLX](https://github.com/ml-explore/mlx) framework and the [mlx-tune](https://github.com/ARahim3/mlx-tune) library.
+
+🚀 **Model Releases:**
+*   **Gemmaiku-3-270m-it** (270M): Published on Hugging Face at [vi-c0de/gemmaiku-3-270m-it-experimental](https://huggingface.co/vi-c0de/gemmaiku-3-270m-it-experimental)
+*   **Gemmaiku-3-1b-it** (1B): Published on Hugging Face at [vi-c0de/gemmaiku-3-1b-it-experimental](https://huggingface.co/vi-c0de/gemmaiku-3-1b-it-experimental)
 
 ## Project Structure
 
@@ -41,7 +45,7 @@ uv sync
 Gemma-3 models are gated on Hugging Face, requiring license terms acceptance before they can be downloaded:
 
 1. **Accept License Terms on Hugging Face**:
-   * Visit the [Gemma-3-270m Model Card](https://huggingface.co/google/gemma-3-270m) or the [Gemma-3-1b-pt Model Card](https://huggingface.co/google/gemma-3-1b-pt) (see the full [Gemma 3 Release Collection](https://huggingface.co/collections/google/gemma-3-release)).
+   * Visit the [Gemma-3-270m-it Model Card](https://huggingface.co/google/gemma-3-270m-it) or the [Gemma-3-1b-it Model Card](https://huggingface.co/google/gemma-3-1b-it) (see the full [Gemma 3 Release Collection](https://huggingface.co/collections/google/gemma-3-release)).
    * Log in to your Hugging Face account and accept the license terms.
 
 2. **Generate a User Access Token**:

@@ -32,3 +32,4 @@ mlx_outputs/
 *.bin
 *.pth
 *.pt
+models/
