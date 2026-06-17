@@ -2,9 +2,11 @@
 
 Fine-tuning [Gemma](https://ai.google.dev/gemma) models on Apple Silicon using Apple's [MLX](https://github.com/ml-explore/mlx) framework and the [mlx-tune](https://github.com/ARahim3/mlx-tune) library.
 
-🚀 **Model Releases:**
+**Releases:**
+*   **Gemmaiku Dataset**: Published on Hugging Face at [vi-c0de/gemmaiku-dataset](https://huggingface.co/datasets/vi-c0de/gemmaiku-dataset)
 *   **Gemmaiku-3-270m-it** (270M): Published on Hugging Face at [vi-c0de/gemmaiku-3-270m-it-experimental](https://huggingface.co/vi-c0de/gemmaiku-3-270m-it-experimental)
 *   **Gemmaiku-3-1b-it** (1B): Published on Hugging Face at [vi-c0de/gemmaiku-3-1b-it-experimental](https://huggingface.co/vi-c0de/gemmaiku-3-1b-it-experimental)
+*   **Gemmaiku-3-1b-it-GGUF** (1B GGUF): Published on Hugging Face at [vi-c0de/gemmaiku-3-1b-it-GGUF](https://huggingface.co/vi-c0de/gemmaiku-3-1b-it-GGUF)
 
 ## Project Structure
 
@@ -14,7 +16,8 @@ This project follows a professional AI/ML engineering repository structure:
 ├── assets/                   # Project assets (e.g. screenshots)
 ├── data/
 │   ├── raw/                  # Original raw datasets (e.g. haikus.json)
-│   └── processed/            # Processed datasets ready for fine-tuning (e.g. haikus_dataset.json)
+│   ├── processed/            # Processed datasets ready for fine-tuning (e.g. haikus_dataset.json)
+│   └── README.md             # Dataset card configuration for Hugging Face
 ├── models/                   # Local model weights, configs, and adapters (safetensors ignored by Git)
 ├── notebooks/
 │   ├── data_preparation/     # Dataset exploration, analysis, and preparation
