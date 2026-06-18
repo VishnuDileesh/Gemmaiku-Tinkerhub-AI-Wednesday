@@ -6,7 +6,7 @@ Fine-tuning [Gemma](https://ai.google.dev/gemma) models on Apple Silicon using A
 *   **Gemmaiku Dataset**: Published on Hugging Face at [vi-c0de/gemmaiku-dataset](https://huggingface.co/datasets/vi-c0de/gemmaiku-dataset)
 *   **Gemmaiku-3-270m-it** (270M): Published on Hugging Face at [vi-c0de/gemmaiku-3-270m-it-experimental](https://huggingface.co/vi-c0de/gemmaiku-3-270m-it-experimental)
 *   **Gemmaiku-3-1b-it** (1B): Published on Hugging Face at [vi-c0de/gemmaiku-3-1b-it-experimental](https://huggingface.co/vi-c0de/gemmaiku-3-1b-it-experimental)
-*   **Gemmaiku-3-1b-it-GGUF** (1B GGUF): Published on Hugging Face at [vi-c0de/gemmaiku-3-1b-it-GGUF](https://huggingface.co/vi-c0de/gemmaiku-3-1b-it-GGUF)
+*   **Gemmaiku-3-1b-it-GGUF** (1B GGUF): Published on Hugging Face at [vi-c0de/gemmaiku-3-1b-it-GGUF-experimental](https://huggingface.co/vi-c0de/gemmaiku-3-1b-it-GGUF-experimental)
 
 ## Project Structure
 
