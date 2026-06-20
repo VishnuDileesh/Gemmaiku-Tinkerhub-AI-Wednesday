@@ -17,8 +17,8 @@ dependencies = [
     { name = "mlx-lm" },
     { name = "mlx-tune" },
     { name = "pandas" },
+    { name = "pronouncing" },
     { name = "seaborn" },
-    { name = "syllables" },
     { name = "transformers" },
 ]
 
@@ -34,8 +34,8 @@ requires-dist = [
     { name = "mlx-lm", specifier = ">=0.31.3" },
     { name = "mlx-tune", specifier = ">=0.5.1" },
     { name = "pandas", specifier = ">=3.0.3" },
+    { name = "pronouncing", specifier = ">=0.3.0" },
     { name = "seaborn", specifier = ">=0.13.2" },
-    { name = "syllables", specifier = ">=1.1.5" },
     { name = "transformers", specifier = ">=5.12.0" },
 ]
 
@@ -1269,6 +1269,18 @@ wheels = [
 ]
 
 [[package]]
+name = "pronouncing"
+version = "0.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "cmudict" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/f5/cd/87ff0e7fcd1acdb25955735658c61aca75800e1570270e29f3c57da07235/pronouncing-0.3.0.tar.gz", hash = "sha256:349664045d059f44032e5fda626210490b1808e4969194a958dd205c526e978a", size = 17867, upload-time = "2026-04-17T04:07:35.366Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b7/5d/ecb2b6e822df7fb0c86939b29bc48193e15c350433821e5f4c7d669e79cb/pronouncing-0.3.0-py3-none-any.whl", hash = "sha256:347bd30f00e28048474b99a8f1fc2e80f845dabdd7f3dce9d03c84f02c710f04", size = 5149, upload-time = "2026-04-17T04:07:33.958Z" },
+]
+
+[[package]]
 name = "propcache"
 version = "0.5.2"
 source = { registry = "https://pypi.org/simple" }
@@ -1759,19 +1771,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/eb/e3/7c1dc7381d9f8ab7d854328ebfa884e62cb3f3d8549ddfd37c7814f42afa/starlette-1.3.1.tar.gz", hash = "sha256:05d0213193f2fbaae60e2ecb593b4add4262ad4e46536b54abe36f11a71724e0", size = 2703240, upload-time = "2026-06-12T09:23:11.602Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/ec/bb/2799cc2ede3ed41131f8975621e7213dfc7ef4acbbaadfa440f32500c370/starlette-1.3.1-py3-none-any.whl", hash = "sha256:c7372aae11c3c3f26a42df7bd626cec2f47d03483d261d369516a615a53714c6", size = 73632, upload-time = "2026-06-12T09:23:10.017Z" },
-]
-
-[[package]]
-name = "syllables"
-version = "1.1.5"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "cmudict" },
-    { name = "importlib-metadata" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/6b/0d/7fd9dd192625d83483ce7ce2a9ab7663346963ce470b28ae7230e4bb524d/syllables-1.1.5.tar.gz", hash = "sha256:aadc7fe3d9853cc40c225af399613e23e51f6c38de7907615391c0de426bc54f", size = 14885, upload-time = "2026-01-11T18:40:26.454Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/6f/c4/b008d3c803d6494fda384b3e239bccc09850bd4f36c0b37d6de32e90f12f/syllables-1.1.5-py3-none-any.whl", hash = "sha256:16cc6650de989d99428c64e2ea34754b481d7a01e163d541aed0c3872c613cf7", size = 15453, upload-time = "2026-01-11T18:40:23.72Z" },
 ]
 
 [[package]]

@@ -10,8 +10,8 @@ dependencies = [
     "mlx-lm>=0.31.3",
     "mlx-tune>=0.5.1",
     "pandas>=3.0.3",
+    "pronouncing>=0.3.0",
     "seaborn>=0.13.2",
-    "syllables>=1.1.5",
     "transformers>=5.12.0",
 ]
 

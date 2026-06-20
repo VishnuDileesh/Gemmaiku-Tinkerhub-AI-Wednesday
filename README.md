@@ -13,10 +13,10 @@ Fine-tuning [Gemma](https://ai.google.dev/gemma) models on Apple Silicon using A
 This project follows a professional AI/ML engineering repository structure:
 
 ```text
-├── assets/                   # Project assets (e.g. screenshots)
+├── assets/                   # Project assets (e.g. screenshots, charts)
 ├── data/
 │   ├── raw/                  # Original raw datasets (e.g. haikus.json)
-│   ├── processed/            # Processed datasets ready for fine-tuning (e.g. haikus_dataset.json)
+│   ├── processed/            # Processed datasets ready for fine-tuning (e.g. haikus_2000.json, haikus_2000.jsonl)
 │   └── README.md             # Dataset card configuration for Hugging Face
 ├── models/                   # Local model weights, configs, and adapters (safetensors ignored by Git)
 ├── notebooks/
@@ -84,6 +84,22 @@ You can import helper code (like the syllable counter) anywhere in the project o
 ```python
 from gemmaiku import get_syllable_count_for_line
 ```
+
+*Note: The syllable counter uses a hybrid dictionary-heuristic approach. It queries the Carnegie Mellon University Pronouncing Dictionary (CMUDict via the `pronouncing` library) for 100% accurate syllable lookups, falling back to a custom rule-based heuristic estimator only for out-of-vocabulary words.*
+
+## Evaluation & Verification
+To verify alignment and syllable structure, we compare the base and fine-tuned models on 10 diverse topics.
+
+To run the model evaluation script:
+```bash
+uv run python scratch/run_evaluation.py
+```
+
+This script will:
+1. Query the base model (`gemma3:1b`) and the fine-tuned model (`gemmaiku:latest`) via local Ollama.
+2. Evaluate responses using the hybrid syllable counter.
+3. Save the raw evaluation data to `scratch/evaluation_results.json`.
+4. Generate a comparative performance chart at `assets/evaluation_chart.png`.
 
 ### Syllable Counter UI
 We also utilize a visual **Syllable Counter** tool to calculate the total number of syllables in a word or sentence line-by-line, showing phonetic hyphenation and syllable verification. For an online reference, you can also use [SyllableCounter.net](https://syllablecounter.net/):

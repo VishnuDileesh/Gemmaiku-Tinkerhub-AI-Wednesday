@@ -33,3 +33,7 @@ mlx_outputs/
 *.pth
 *.pt
 models/
+
+# Logs and generated data
+*.log
+scratch/*.json
